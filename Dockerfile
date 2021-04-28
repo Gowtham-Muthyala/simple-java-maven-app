@@ -24,4 +24,4 @@ RUN apt-get install -y default-jdk
 
 # EXPOSE 8080
 # CMD [ "java" ]
-# ENTRYPOINT ["npm start"]
+ENTRYPOINT ["java","-jar","my-app-1.0-SNAPSHOT.jar"]
