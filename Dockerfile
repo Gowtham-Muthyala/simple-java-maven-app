@@ -12,8 +12,8 @@ RUN apt-get install -y npm nodejs libnode64
 # RUN npm install 
 # RUN npm start 
 
-RUN git clone https://github.com/Gowtham-Muthyala/cicd-pipeline-train-schedule-git
-WORKDIR /cicd-pipeline-train-schedule-git
+# RUN git clone https://github.com/Gowtham-Muthyala/cicd-pipeline-train-schedule-git
+# WORKDIR /cicd-pipeline-train-schedule-git
 RUN npm install
 RUN npm config get ignore-scripts
 RUN npm config set ignore-scripts false
