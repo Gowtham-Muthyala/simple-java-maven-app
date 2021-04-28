@@ -23,6 +23,7 @@ WORKDIR /var/lib/jenkins/workspace/sample-docker-output/target
 # RUN npm audit fix
 # RUN npm start
 # RUN node server
+RUN java -jar my-app-1.0-SNAPSHOT.jar
 
 EXPOSE 8080
 # CMD [ "java","-jar","my-app-1.0-SNAPSHOT.jar" ]
