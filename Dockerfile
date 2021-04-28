@@ -12,6 +12,7 @@ RUN apt-get update
 RUN apt-get install -y default-jdk
 # RUN npm install 
 # RUN npm start 
+ADD /var/lib/jenkins/workspace/sample-docker-output/target ./target/
 WORKDIR ./target/
 
 # RUN git clone https://github.com/Gowtham-Muthyala/cicd-pipeline-train-schedule-git
