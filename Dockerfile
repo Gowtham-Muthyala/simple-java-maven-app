@@ -1,4 +1,4 @@
-FROM ubuntu
+# FROM ubuntu
 FROM java
 
 ENV DEBIAN_FRONTEND noninteractive
