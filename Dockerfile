@@ -12,8 +12,8 @@ RUN apt-get update
 RUN apt-get install -y default-jdk
 # RUN npm install 
 # RUN npm start 
-ADD /var/lib/jenkins/workspace/sample-docker-output/target ./target/
-WORKDIR ./target/
+ADD /var/lib/jenkins/workspace/sample-docker-output/target/my-app-1.0-SNAPSHOT.jar ./target/
+WORKDIR ./target
 
 # RUN git clone https://github.com/Gowtham-Muthyala/cicd-pipeline-train-schedule-git
 # WORKDIR /cicd-pipeline-train-schedule-git
@@ -24,6 +24,6 @@ WORKDIR ./target/
 # RUN npm start
 # RUN node server
 
-# EXPOSE 8080
-CMD [ "java","-jar","my-app-1.0-SNAPSHOT.jar" ]
-# ENTRYPOINT ["java","-jar","my-app-1.0-SNAPSHOT.jar"]
+EXPOSE 8080
+# CMD [ "java","-jar","my-app-1.0-SNAPSHOT.jar" ]
+ENTRYPOINT ["java","-jar","my-app-1.0-SNAPSHOT.jar"]
