@@ -23,5 +23,5 @@ RUN apt-get install -y default-jdk
 # RUN node server
 
 # EXPOSE 8080
-# CMD [ "java" ]
-ENTRYPOINT ["java","-jar","my-app-1.0-SNAPSHOT.jar"]
+CMD [ "java","-jar","my-app-1.0-SNAPSHOT.jar" ]
+# ENTRYPOINT ["java","-jar","my-app-1.0-SNAPSHOT.jar"]
