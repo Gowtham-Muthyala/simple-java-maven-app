@@ -27,4 +27,5 @@ RUN java -jar my-app-1.0-SNAPSHOT.jar
 
 EXPOSE 8080
 # CMD [ "java","-jar","my-app-1.0-SNAPSHOT.jar" ]
-ENTRYPOINT ["java","-jar","./my-app-1.0-SNAPSHOT.jar"]
+CMD ["/bin/bash", "-ex", "java -jar my-app-1.0-SNAPSHOT.jar"]
+# ENTRYPOINT ["java","-jar","./my-app-1.0-SNAPSHOT.jar"]
