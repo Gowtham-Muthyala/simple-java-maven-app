@@ -7,10 +7,8 @@ pipeline {
     }
     stages {
         stage('Build') {
-            agent any
             steps {
                 sh 'mvn -B -DskipTests clean package'
-                sh 'docker build -t gowthammuthyala/sample-proj .'
             }
         }
         stage('Test') {
@@ -24,10 +22,8 @@ pipeline {
             }
         }
         stage('Deliver') {
-            agent any
             steps {
                 sh './jenkins/scripts/deliver.sh'
-                sh 'docker run gowthammuthyala/sample-proj'
             }
         }
     }
