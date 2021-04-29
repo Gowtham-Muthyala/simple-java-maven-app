@@ -10,7 +10,7 @@ RUN apt-get update
 # RUN apt-get --purge remove nodejs 
 # RUN apt-get update 
 # RUN apt-get install -y npm nodejs libnode64
-RUN apt-get install -y default-jdk
+RUN apt-get install -y default-jre
 # RUN npm install 
 # RUN npm start 
 ADD /var/lib/jenkins/workspace/sample-docker-output/target/my-app-1.0-SNAPSHOT.jar /home/my-app-1.0-SNAPSHOT.jar
