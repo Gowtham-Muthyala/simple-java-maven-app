@@ -28,4 +28,4 @@ java -jar target/${NAME}-${VERSION}.jar
 # echo '-------------------------------------------------------------------------------'
 # echo 'Building a Docker Image'
 # echo '-------------------------------------------------------------------------------'
-docker build -t gowthammuthyala/java-proj . --build-arg JOB_NAME="${env.JOB_NAME}"
+docker build -t gowthammuthyala/java-proj --build-arg JOB_NAME="${env.JOB_NAME}" .
