@@ -34,8 +34,8 @@ pipeline {
                 }
             }*/
             steps {
-                // sh './jenkins/scripts/deliver.sh'
-                sh 'docker build -t gowthammuthyala/${JOB_NAME} .'
+                sh './jenkins/scripts/deliver.sh'
+                // sh 'docker build -t gowthammuthyala/${JOB_NAME} .'
             }
         }
     }
