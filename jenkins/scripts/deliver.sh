@@ -25,7 +25,7 @@ echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 set -x
 java -jar target/${NAME}-${VERSION}.jar
 
-echo '-------------------------------------------------------------------------------'
-echo 'Building a Docker Image'
-echo '-------------------------------------------------------------------------------'
-sudo docker build -t gowthammuthyala/java-proj .
+# echo '-------------------------------------------------------------------------------'
+# echo 'Building a Docker Image'
+# echo '-------------------------------------------------------------------------------'
+# sudo docker build -t gowthammuthyala/java-proj .
