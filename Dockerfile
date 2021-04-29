@@ -13,6 +13,7 @@ RUN apt-get update
 RUN apt-get install -y default-jre
 # RUN npm install 
 # RUN npm start 
+RUN pwd
 ADD /var/lib/jenkins/workspace/sample-docker-output/target/my-app-1.0-SNAPSHOT.jar /home/my-app-1.0-SNAPSHOT.jar
 RUN chmod +x /home/my-app-1.0-SNAPSHOT.jar
 # WORKDIR /var/lib/jenkins/workspace/sample-docker-output/target
@@ -30,4 +31,5 @@ RUN chmod +x /home/my-app-1.0-SNAPSHOT.jar
 EXPOSE 8080
 # CMD /home/my-app-1.0-SNAPSHOT.jar
 # CMD java -jar my-app-1.0-SNAPSHOT.jar
+RUN pwd
 ENTRYPOINT ["java","-jar","/home/my-app-1.0-SNAPSHOT.jar"]
