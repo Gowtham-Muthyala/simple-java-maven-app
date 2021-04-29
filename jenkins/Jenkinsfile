@@ -9,6 +9,7 @@ pipeline {
                 }
             }
             steps {
+                sh 'pwd && ls'
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
                 sh 'mvn -B -DskipTests clean package'
             }
