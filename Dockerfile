@@ -3,6 +3,9 @@ FROM ubuntu:16.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
+ARG JOB_NAME
+ENV JENKINS_HOME=/var/lib/jenkins
+
 RUN apt-get update
 # RUN apt-get install -y git 
 # RUN apt-get --purge remove node 
@@ -14,7 +17,7 @@ RUN apt-get install -y default-jre
 # RUN npm install 
 # RUN npm start 
 RUN pwd
-RUN mv ${JENKINS_HOME}/workspace/${JOB_NAME}/target/*.jar .
+RUN mv ${JENKINS_HOME}/workspace/${JOB_NAME}/target/my-app-1.0-SNAPSHOT.jar .
 # ADD /var/lib/jenkins/workspace/sample-docker-output/target/my-app-1.0-SNAPSHOT.jar /home/my-app-1.0-SNAPSHOT.jar
 # RUN chmod +x /home/my-app-1.0-SNAPSHOT.jar
 # WORKDIR /var/lib/jenkins/workspace/sample-docker-output/target
