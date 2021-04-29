@@ -23,7 +23,7 @@ pipeline {
             }
         }
         stage('Deliver') {
-            agent {
+            /* agent {
                 dockerfile {
                 filename 'Dockerfile'
                 dir '../'
@@ -31,7 +31,7 @@ pipeline {
                 additionalBuildArgs  '--build-arg version=1.0.2'
                 args '-v /tmp:/tmp'
                 }
-            }
+            }*/
             steps {
                 sh './jenkins/scripts/deliver.sh'
             }
