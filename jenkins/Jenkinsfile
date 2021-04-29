@@ -9,6 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
+                sh 'sudo docker build -t gowthammuthyala/sample-proj .'
             }
         }
         stage('Test') {
@@ -24,6 +25,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
+                sh 'sudo docker run gowthammuthyala/sample-proj'
             }
         }
     }
