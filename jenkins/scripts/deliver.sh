@@ -28,4 +28,4 @@ java -jar target/${NAME}-${VERSION}.jar
 # echo '-------------------------------------------------------------------------------'
 # echo 'Building a Docker Image'
 # echo '-------------------------------------------------------------------------------'
-# sudo docker build -t gowthammuthyala/java-proj .
+docker build -t gowthammuthyala/java-proj .
