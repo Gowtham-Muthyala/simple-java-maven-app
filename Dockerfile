@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 # FROM java
 
 ENV DEBIAN_FRONTEND noninteractive
