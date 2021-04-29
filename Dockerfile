@@ -17,7 +17,7 @@ RUN apt-get install -y default-jre
 # RUN npm install 
 # RUN npm start 
 RUN pwd
-COPY ${JENKINS_HOME}/workspace/${JOB_NAME}/target /home
+ADD ${JENKINS_HOME}/workspace/${JOB_NAME}/target /home
 # ADD /var/lib/jenkins/workspace/sample-docker-output/target/my-app-1.0-SNAPSHOT.jar /home/my-app-1.0-SNAPSHOT.jar
 # RUN chmod +x /home/my-app-1.0-SNAPSHOT.jar
 # WORKDIR /var/lib/jenkins/workspace/sample-docker-output/target
